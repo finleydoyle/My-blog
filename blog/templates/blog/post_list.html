@@ -8,9 +8,13 @@
             <h2>Finley Doyle</h2>
         </div>
 
-        <div>
-              <a href="http://djangogirls.org">Django Girls Website</a>
-        </div>
+        {% for post in posts %}
+      <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaks }}</p>
+      </div>
+        {% endfor %}
 
         <div>
             <p>published: 14.06.2014, 12:14</p>
